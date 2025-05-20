@@ -1,6 +1,6 @@
 {
   "name": "pretendard-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "가볍고 빠른 프리텐다드 폰트 패키지",
   "main": "index.js",
   "types": "declaration.d.ts",
@@ -20,10 +20,17 @@
     "typography",
     "typescript"
   ],
-  "author": "woojoo",
+  "author": "leessang10",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leessang10/pretendard-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leessang10/pretendard-lite/issues"
+  },
+  "homepage": "https://github.com/leessang10/pretendard-lite#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }

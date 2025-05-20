@@ -20,11 +20,124 @@ import 'pretendard-lite/style.css';
 require('pretendard-lite/style.css');
 ```
 
-### Next.js
+### 스타일 라이브러리별 사용법
+
+#### Tailwind CSS
+
+```javascript
+// 1. 먼저 CSS를 import 합니다
+// src/styles/globals.css 또는 main CSS 파일
+@import 'pretendard-lite/style.css';
+
+// 2. Tailwind 설정에 폰트를 추가합니다
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Pretendard', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+
+// 3. 사용 예시
+// className="font-sans"로 적용됩니다
+```
+
+#### Styled Components
+
+```javascript
+// globalStyle.js
+import { createGlobalStyle } from 'styled-components';
+import 'pretendard-lite/style.css';
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: var(--font-sans);
+  }
+`;
+
+// App.js
+import { GlobalStyle } from './globalStyle';
+
+function App() {
+  return (
+    <>
+      <GlobalStyle />
+      {/* 나머지 컴포넌트들 */}
+    </>
+  );
+}
+```
+
+#### Emotion
+
+```javascript
+// globalStyles.js
+import { Global, css } from '@emotion/react';
+import 'pretendard-lite/style.css';
+
+export const globalStyles = (
+  <Global
+    styles={css`
+      body {
+        font-family: var(--font-sans);
+      }
+    `}
+  />
+);
+
+// App.js
+import { globalStyles } from './globalStyles';
+
+function App() {
+  return (
+    <>
+      {globalStyles}
+      {/* 나머지 컴포넌트들 */}
+    </>
+  );
+}
+```
+
+#### Next.js
 
 ```javascript
 // pages/_app.js 또는 pages/_app.tsx
 import 'pretendard-lite/style.css';
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+#### Vue.js
+
+```javascript
+// main.js
+import 'pretendard-lite/style.css';
+import { createApp } from 'vue';
+import App from './App.vue';
+
+createApp(App).mount('#app');
+```
+
+#### Angular
+
+```css
+/* styles.css */
+@import 'pretendard-lite/style.css';
+
+:root {
+  --font-sans: 'Pretendard', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
 ```
 
 ### CSS
