@@ -1,0 +1,29 @@
+{
+  "name": "pretendard-lite",
+  "version": "1.0.0",
+  "description": "가볍고 빠른 프리텐다드 폰트 패키지",
+  "main": "index.js",
+  "types": "declaration.d.ts",
+  "files": [
+    "fonts",
+    "style.css",
+    "index.js",
+    "declaration.d.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pretendard",
+    "font",
+    "korean",
+    "typography",
+    "typescript"
+  ],
+  "author": "woojoo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leessang10/pretendard-lite.git"
+  }
+}
